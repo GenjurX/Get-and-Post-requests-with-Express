@@ -10,7 +10,9 @@ function returnUnique (array) {
     const unique = [];
     for(let element of array) {
         if(!unique.includes(Number(element))){
+            if(!isNaN(Number(element))){
             unique.push(Number(element));
+            }
         }
     } 
     return unique;
